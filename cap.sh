@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Simple ring-buffer capture for reproductions
+# Time-limited capture for reproductions. Usage: ./cap.sh [iface] [out.pcapng] [seconds]
 set -euo pipefail
 IFACE="${1:-eth0}"
 OUT="${2:-capture.pcapng}"
