@@ -1,0 +1,17 @@
+# dhcp
+dhcp
+
+# dns
+dns
+
+# tcp
+tcp.flags.syn==1 || tcp.flags.reset==1 || tcp.analysis.retransmission || tcp.analysis.lost_segment
+
+# tls
+tls || tcp.port==443
+
+# icmp
+icmp || icmpv6
+
+# minimal union
+(dhcp) || (dns) || (tcp.flags.syn==1 || tcp.flags.reset==1 || tcp.analysis.retransmission || tcp.analysis.lost_segment) || (tls || tcp.port==443) || (icmp || icmpv6)

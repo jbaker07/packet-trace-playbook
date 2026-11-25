@@ -1,0 +1,7 @@
+#filter name|packets it matches in sample.pcapng
+dhcp|5
+dns|4
+tcp|12
+tls|31
+icmp|11
+minimal union|59
